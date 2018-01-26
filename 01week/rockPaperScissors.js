@@ -7,10 +7,56 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+// an easier way to do this would have been if (hand1 === hand2) {
+//return 'its a tie!';
+//}
 
 function rockPaperScissors(hand1, hand2) {
+  hand1=hand1.toLowerCase();
+  hand2=hand2.toLowerCase();
 
-  // Write code here
+  if (hand1 === 'rock'){
+   if (hand2 === 'rock') {
+     return 'tie';
+   }  else if (hand2 === 'paper'){
+        return 'player 2 wins';
+   }      else if (hand2 === 'scissors') {
+            return 'player 1 wins';
+   }          else {
+                return 'try again';
+    }
+  }else if (hand1 === 'paper') {
+    if (hand2 === 'rock') {
+      return 'player 1 wins';
+    }   else if (hand2 === 'paper') {
+          return 'tie';
+    }       else if (hand2 === 'scissors') {
+              return 'player 2 wins';
+                else {
+                  return 'try again';
+                }
+    }
+  }else if (hand1 === 'scissors') {
+    if (hand2 === 'rock') {
+      return 'player 2 wins'; {
+        else if (hand2 === 'paper') {
+          return 'player 1 wins'; {
+            else if (hand2 === 'scissors') {
+              return 'tie';
+                else {
+                  return 'try again';
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Write code here (above, in this case)
+  /*step 1 take in hand 1 and take in hand 2.
+  code block should compare the two arguments hand1 and hand2.
+   4-12 will be if/then conditional statements based on each rule.
+   */
 
 }
 
