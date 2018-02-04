@@ -24,11 +24,19 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
+  if([0][0] === playerTurn && [0][1] === playerTurn && [0][2] === playerTurn){
+    return true;
+  }
+  if([1][0] === playerTurn && [1][1] === playerTurn && [1][2] === playerTurn){
+    return true;
+  }
+  if([2][0] === playerTurn && [2][1] === playerTurn && [2][2] === playerTurn){
+    return true;
+  }
 }
 
 function verticalWin() {
-  // Your code here
+  if([])
 }
 
 function diagonalWin() {
@@ -36,12 +44,32 @@ function diagonalWin() {
 }
 
 function checkForWin() {
-  // Your code here
+
 }
 
 function ticTacToe(row, column) {
-  // Your code hererow
+if (board[row][column] === ' ') {
+  board[row][column] = playerTurn;
+if (checkForWin()){
+
+} else {
+  if (playerTurn === 'X') {
+    playerTurn = 'O';
+  } else {
+    playerTurn = 'X';
+    }
+  return playerTurn;
+  }
+}
+
   console.log(row, column)
+  // check if valid input
+  //check for empty space
+  //occupy space with X or O
+  //check for win after marking space
+  //if win, game is over
+  //when game is over, reset the board to blank, player turn would start over
+  //if not a win, switch players
 }
 
 function getPrompt() {
