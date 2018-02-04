@@ -12,9 +12,7 @@ const rl = readline.createInterface({
 /* The first function below splits the word or string into an array of substrings, which allows the following functions to move letters (which now make up the new array) around. */
 /* It seems like maybe a good idea to establish string as a global variable so it can be used for all functions without having to re-write it for each function*/
 
-let word = String
-
-function letters(word) {
+function splitWordIntoArray(word) {
     return word.split('')
 }
 
@@ -22,11 +20,12 @@ function pigLatin(word) {
   const vowelArray = ["a", "e", "i", "o", "u"]
   if (vowelArray.includes(word[0])) {
     console.log("firstIsVowel")
-        return word=word+"way";
-  }else if (chars = letters(word)){
+        return word+"way";
+  }else {
     console.log("firstNotVowel")
+      const chars = splitWordIntoArray(word)
       return chars.slice(1).join('') + chars[0] + 'ay';
-}
+  }
 }
 
 function getPrompt() {
