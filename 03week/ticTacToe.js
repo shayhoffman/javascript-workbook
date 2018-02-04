@@ -40,7 +40,8 @@ function checkForWin() {
 }
 
 function ticTacToe(row, column) {
-  // Your code here
+  // Your code hererow
+  console.log(row, column)
 }
 
 function getPrompt() {
