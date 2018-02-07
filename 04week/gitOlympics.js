@@ -6,4 +6,4 @@ function printListOfOlympians = (list) => {
 list.forEach(printListOfOlympians(element) {
   console.log(element);
 });
-} 
+} printListOfOlympians(listOfOlympians)
