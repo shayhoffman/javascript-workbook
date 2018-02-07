@@ -2,6 +2,8 @@
 
 const listOfOlympians = ['Bob', 'Joe', 'Tina', 'Sarah', 'Jim'];
 
-function printListOfOlympians() {
-  console.log(printListOfOlympians)
-}
+function printListOfOlympians = (list) => {
+list.forEach(printListOfOlympians(element) {
+  console.log(element);
+});
+} 
