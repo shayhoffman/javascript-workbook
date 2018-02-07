@@ -36,22 +36,50 @@ function horizontalWin() {
 }
 
 function verticalWin() {
-  if([])
+  if([0][0] === playerTurn && [1][0] === playerTurn && [2][0] === playerTurn){
+    return true;
+  }
+  if([0][1] === playerTurn && [1][1] === playerTurn && [2][1] === playerTurn){
+    return true;
+  }
+  if([0][2] === playerTurn && [1][2] === playerTurn && [2][2] === playerTurn){
+    return true;
+  }
 }
 
 function diagonalWin() {
-  // Your code here
+  if([0][0] === playerTurn && [1][1] === playerTurn && [2][2] === playerTurn){
+    return true;
+  }
+  if([0][2] === playerTurn && [1][1] === playerTurn && [2][0] === playerTurn){
+    return true;
+  }
 }
 
 function checkForWin() {
-
+  if (horizontalWin()) {
+    console.log(horizontal win);
+    return "You won!"
+  }
+  if (verticalWin()){
+    console.log(vertical win);
+    return "You won!"
+  }
+  if (diagonalWin()){
+    console.log(diagonal win);
+    return "You won!"
+  }
 }
 
 function ticTacToe(row, column) {
 if (board[row][column] === ' ') {
   board[row][column] = playerTurn;
-if (checkForWin()){
-
+if (checkForWin()){ //create reset the board function.
+  board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+  ];
 } else {
   if (playerTurn === 'X') {
     playerTurn = 'O';
