@@ -20,7 +20,7 @@ function printStacks() {
 }
 
 function movePiece() {
-  // Your code here
+  console.log()
 
 }
 
@@ -50,5 +50,3 @@ function getPrompt() {
 }
 
 getPrompt();
-
-
