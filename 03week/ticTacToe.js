@@ -24,23 +24,80 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
+  if([0][0] === playerTurn && [0][1] === playerTurn && [0][2] === playerTurn){
+    return true;
+  }
+  if([1][0] === playerTurn && [1][1] === playerTurn && [1][2] === playerTurn){
+    return true;
+  }
+  if([2][0] === playerTurn && [2][1] === playerTurn && [2][2] === playerTurn){
+    return true;
+  }
 }
 
 function verticalWin() {
-  // Your code here
+  if([0][0] === playerTurn && [1][0] === playerTurn && [2][0] === playerTurn){
+    return true;
+  }
+  if([0][1] === playerTurn && [1][1] === playerTurn && [2][1] === playerTurn){
+    return true;
+  }
+  if([0][2] === playerTurn && [1][2] === playerTurn && [2][2] === playerTurn){
+    return true;
+  }
 }
 
 function diagonalWin() {
-  // Your code here
+  if([0][0] === playerTurn && [1][1] === playerTurn && [2][2] === playerTurn){
+    return true;
+  }
+  if([0][2] === playerTurn && [1][1] === playerTurn && [2][0] === playerTurn){
+    return true;
+  }
 }
 
 function checkForWin() {
-  // Your code here
+  if (horizontalWin()) {
+    console.log(horizontal win);
+    return "You won!"
+  }
+  if (verticalWin()){
+    console.log(vertical win);
+    return "You won!"
+  }
+  if (diagonalWin()){
+    console.log(diagonal win);
+    return "You won!"
+  }
 }
 
 function ticTacToe(row, column) {
-  // Your code here
+if (board[row][column] === ' ') {
+  board[row][column] = playerTurn;
+if (checkForWin()){ //create reset the board function.
+  board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+  ];
+} else {
+  if (playerTurn === 'X') {
+    playerTurn = 'O';
+  } else {
+    playerTurn = 'X';
+    }
+  return playerTurn;
+  }
+}
+
+  console.log(row, column)
+  // check if valid input
+  //check for empty space
+  //occupy space with X or O
+  //check for win after marking space
+  //if win, game is over
+  //when game is over, reset the board to blank, player turn would start over
+  //if not a win, switch players
 }
 
 function getPrompt() {
