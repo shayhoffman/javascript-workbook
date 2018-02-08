@@ -12,16 +12,9 @@ const rl = readline.createInterface({
 //}
 
 function rockPaperScissors(hand1, hand2) {
-<<<<<<< Updated upstream
-  hand1=hand1.toLowerCase();
-  hand2=hand2.toLowerCase();
-=======
-<<<<<<< Updated upstream
-=======
+
   hand1=hand1.toLowerCase().trim();
   hand2=hand2.toLowerCase().trim();
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
   if (hand1 === 'rock'){
    if (hand2 === 'rock') {
