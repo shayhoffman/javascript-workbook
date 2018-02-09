@@ -18,48 +18,38 @@ function rockPaperScissors(hand1, hand2) {
 
   if (hand1 === 'rock'){
    if (hand2 === 'rock') {
-     return 'tie';
-   }  else if (hand2 === 'paper'){
-        return 'player 2 wins';
-   }      else if (hand2 === 'scissors') {
-            return 'player 1 wins';
-   }          else {
-                return 'try again';
+     return "It's a tie!";
+   }else if (hand2 === 'paper'){
+     return "Hand two wins!";
+   }else if (hand2 === 'scissors') {
+     return "Hand one wins!";
+   }else {
+     return "try again";
     }
   }else if (hand1 === 'paper') {
     if (hand2 === 'rock') {
-      return 'player 1 wins';
-    }   else if (hand2 === 'paper') {
-          return 'tie';
-    }       else if (hand2 === 'scissors') {
-              return 'player 2 wins';
-                else {
-                  return 'try again';
-                }
+      return "Hand one wins!";
+    }else if (hand2 === 'paper') {
+      return "It's a tie!";
+    }else if (hand2 === 'scissors') {
+      return "Hand two wins!";
+    }else {
+      return "try again";
     }
+
   }else if (hand1 === 'scissors') {
     if (hand2 === 'rock') {
-      return 'player 2 wins'; {
-        else if (hand2 === 'paper') {
-          return 'player 1 wins'; {
-            else if (hand2 === 'scissors') {
-              return 'tie';
-                else {
-                  return 'try again';
-                }
-            }
-          }
-        }
-      }
+      return "Hand two wins!";
+    }else if (hand2 === 'paper'){
+      return "Hand one wins!";
+    } else if(hand2 === 'scissors') {
+      return "It's a tie!";
+    }else {
+      return "try again";
     }
   }
-  // Write code here (above, in this case)
-  /*step 1 take in hand 1 and take in hand 2.
-  code block should compare the two arguments hand1 and hand2.
-   4-12 will be if/then conditional statements based on each rule.
-   */
-
 }
+
 
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
