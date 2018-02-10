@@ -29,7 +29,7 @@ const movePiece = (startStack, endStack) => {
 //the above movePiece function just makes the game functional, and lets you move pieces around. It allows for the removal of the last item in the first array (or startStack, in this case), through popping it off the end, and pushing it to the endStack, which could be stack b or c.
 
 const isLegal = (startStack, endStack) => {
-  // Your code here
+  return stacks[endStack].push() === 0
 
 }
 //there should be a test to check to see whether a user's input is valid
