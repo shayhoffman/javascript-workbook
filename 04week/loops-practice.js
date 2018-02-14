@@ -52,6 +52,10 @@ const baseAndDate = () => {
 baseAndDate();
 
 //create a function that returns a list of availble currencies from a given object. Use latestExchangeRate as an example to test your function
+const availableCurrencies = () => {
+  return Object.keys(latestExchangeRate.rates);
+}
+availableCurrencies()
 
 // create a function that console logs a string with the currency and the currency rate for each currency in a given object. For example, 'AUD is at a 1.2742 conversion rate'. Use latestExchangeRate as an example to test your function
 
