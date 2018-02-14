@@ -46,14 +46,16 @@ const latestExchangeRate = {
 }
 
 //create a function that returns the base and date for and object. Use latestExchangeRate as an example to test your function
-const baseAndDate = () => {
+const baseAndDate = (obj) => {
   return "base " + latestExchangeRate.base + " date " + latestExchangeRate.date
 };
 baseAndDate();
 
 //create a function that returns a list of availble currencies from a given object. Use latestExchangeRate as an example to test your function
-const availableCurrencies = () => {
+//whenever you hear list, think array
+const availableCurrencies = (obj) => {
   return Object.keys(latestExchangeRate.rates);
+  //object.keys creates a new array from the keys in the object
 }
 availableCurrencies()
 
