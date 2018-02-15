@@ -7,3 +7,13 @@ for(let i = 0; i < carsInReverse.length; i++) {
 }
 
 //Create an object (an array with keys and values) called persons with the following data:
+let persons = {
+  firstName: "Jane",
+  lastName: "Doe",
+  birthDate: "Jan 5 1925",
+  gender: "female",
+}
+
+for (let x in persons) {
+  console.log(x);
+}
