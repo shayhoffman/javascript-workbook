@@ -17,3 +17,13 @@ let persons = {
 for (let x in persons) {
   console.log(x);
 }
+
+for (let x in persons) {
+  if(x === 'birthDate'){
+    console.log(persons[x]);
+  }
+}
+
+for(let i = 0; i < 1001; i++) {
+  console.log(i)
+}
