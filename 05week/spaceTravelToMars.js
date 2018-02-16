@@ -1,5 +1,5 @@
 'use strict';
-
+console.log()
 let assert = require('assert');
 
 let jobTypes = {
