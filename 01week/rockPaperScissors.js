@@ -7,12 +7,49 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+// an easier way to do this would have been if (hand1 === hand2) {
+//return 'its a tie!';
+//}
 
 function rockPaperScissors(hand1, hand2) {
 
-  // Write code here
+  hand1=hand1.toLowerCase().trim();
+  hand2=hand2.toLowerCase().trim();
 
+  if (hand1 === 'rock'){
+   if (hand2 === 'rock') {
+     return "It's a tie!";
+   }else if (hand2 === 'paper'){
+     return "Hand two wins!";
+   }else if (hand2 === 'scissors') {
+     return "Hand one wins!";
+   }else {
+     return "try again";
+    }
+  }else if (hand1 === 'paper') {
+    if (hand2 === 'rock') {
+      return "Hand one wins!";
+    }else if (hand2 === 'paper') {
+      return "It's a tie!";
+    }else if (hand2 === 'scissors') {
+      return "Hand two wins!";
+    }else {
+      return "try again";
+    }
+
+  }else if (hand1 === 'scissors') {
+    if (hand2 === 'rock') {
+      return "Hand two wins!";
+    }else if (hand2 === 'paper'){
+      return "Hand one wins!";
+    } else if(hand2 === 'scissors') {
+      return "It's a tie!";
+    }else {
+      return "try again";
+    }
+  }
 }
+
 
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
