@@ -6,11 +6,28 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-console.log()
+//code plan:
+
+//first step: print the board with checker pieces
+//then have to move. two coordinates to start and two coordinates to finish.
+  //'41' -> [4][1]
+  //str[0] -> 4
+  //str[1] -> 1
+//then have to check for valid move. check for valid input
+  //can only move forward, and diagonally and only if the spot you're moving to is open. CANNOT move backward.
+//if valid move, then move. how?
+  //could splice.
+//check for win: fill 4 spots on opposite side of the board OR if no more valid moves possible, then game ends, and count who has more checkers.
+//must track turns. if no win, then change players.
+//don't worry about kinging people or double jumps. make sure you cannot jump your own pieces
+//HINT from Renee:
 
 function Checker() {
   // Your code here
 }
+//how you make the game functional through creating a function to move stuff around?
+//class. can tell because of capital letter
+//this class is just creating the symbol
 
 function Board() {
   this.grid = [];
@@ -22,11 +39,18 @@ function Board() {
       // push in 8 columns of nulls
       for (let column = 0; column < 8; column++) {
         this.grid[row].push(null);
+        //null is just a placeholder. null won't be here forever
+        //HINT: change above null to checker
       }
     }
   };
+  //board is another class
+  //board will have 64 squares
+  //each player gets 12 checkers for a total of 24
+  //pieces would likely be created in this function
 
   // prints out the board
+
   this.viewGrid = function() {
     // add our column numbers
     let string = "  0 1 2 3 4 5 6 7\n";
@@ -54,6 +78,8 @@ function Board() {
 
   // Your code here
 }
+
+
 function Game() {
 
   this.board = new Board();
@@ -61,8 +87,12 @@ function Game() {
   this.start = function() {
     this.board.createGrid();
     // Your code here
+    //game.moveChecker();
   };
 }
+//Game is a class
+//game is going to take in board
+
 
 function getPrompt() {
   game.board.viewGrid();
