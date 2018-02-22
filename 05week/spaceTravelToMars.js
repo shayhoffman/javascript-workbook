@@ -1,9 +1,9 @@
 'use strict';
-console.log()
+
 let assert = require('assert');
 
 //will probably have to make objects like jobTypes for name, job, specialSkill for crewMember, and then name, type, and ability for Ship class
-//goal of the game: get ships to print out their mission statements. 
+//goal of the game: get ships to print out their mission statements.
 
 let jobTypes = {
   pilot: 'MAV',
@@ -12,7 +12,34 @@ let jobTypes = {
   programmer: 'Any Ship!'
 };
 
-// Your code here
+class CrewMember {
+  constructor(name, job, specialSkill, ship) {
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
+  enterShip(ship) {
+    this.ship = ship;
+    ship.crew.push(this);
+  }
+}
+
+class Ship {
+  constructor(name, type, ability, crew) {
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+  missionStatement() {
+    if (this.crew.length < 1) {
+      return "Can't perform a mission yet.";
+    } else {
+      return this.ability;
+    }
+  }
+}
 
 //tests
 if (typeof describe === 'function'){
