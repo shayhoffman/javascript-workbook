@@ -5,7 +5,7 @@ const assert = require('assert');
 function forEach(arr, callback) {
   // Your code here
 }
-
+console.log()
 function map(arr, callback) {
   // Your code here
 }
