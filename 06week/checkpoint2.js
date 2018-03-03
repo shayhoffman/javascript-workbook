@@ -10,6 +10,7 @@ console.log(nums);
 
 // Find the sum of the even values
 //changed to nums instead of strNums because don't want to deal with them as strings anymore; easier to use numbers.
+//would use filter to return all the even numbers, and then reduce to get a single sum. 
 const sumEvens = nums.filter((num) => {return !(num % 2)}).reduce((a, b) => a + b);
 
 console.log(sumEvens);
