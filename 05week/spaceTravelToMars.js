@@ -1,5 +1,7 @@
 'use strict';
 
+//comments below are rough code plan. forgot i had this project still out. 
+
 let assert = require('assert');
 
 //will probably have to make objects like jobTypes for name, job, specialSkill for crewMember, and then name, type, and ability for Ship class
