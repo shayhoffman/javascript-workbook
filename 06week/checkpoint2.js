@@ -32,8 +32,12 @@ nums.forEach((num) => {
   numCount[num] = nums.filter(x => x === num).length;
 });
 
+<<<<<<< Updated upstream
 console.log(numCount)
 
+=======
+console.log(numCount);
+>>>>>>> Stashed changes
 
 // Find the index of the first "Austin" value (the value plus its index equals 512)
 //after struggling with this one for several hours, the solution feels stupidly simple. sigh. need to spend more time coding.
