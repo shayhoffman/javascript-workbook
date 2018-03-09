@@ -7,7 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: ''
+      inputValue: '',
+      list: [],
     }
   }
 
@@ -35,7 +36,7 @@ handleButtonClick = () => {
           </div>;
         })}
       </div>
-      <MuiThemeProvider>
+      </MuiThemeProvider>
     );
   }
 }
