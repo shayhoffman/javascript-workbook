@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-console.log()
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
   constructor(props) {
@@ -17,12 +17,25 @@ handleInputChange = (e) => {
   })
 }
 
+handleButtonClick = () => {
+  const list = this.state.list;
+  list.push(this.state.inputValue);
+  this.setState({list: list, inputValue: ''})
+}
+
   render() {
     return (
+      <MuiThemeProvider>
       <div className="App">
-        <input onChange = {this.handleInputChange} type= 'text'></input>
-        <button>submit</button>
+        <input value = {this.state.inputValue} onChange = {this.handleInputChange} type= 'text'></input>
+        <button onClick={this.handleButtonClick}>submit</button>
+        {this.state.list.map((item, index) =>{
+          return <div className= 'list-item'>
+          <p key={index}>{item}</p>
+          </div>;
+        })}
       </div>
+      <MuiThemeProvider>
     );
   }
 }
