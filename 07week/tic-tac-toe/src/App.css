@@ -6,6 +6,7 @@ margin: auto;
 .menu {
   text-align: center;
   width: 90%;
+  border: 15px;
 }
 
 /* h1 {
@@ -15,10 +16,10 @@ margin: auto;
 button {
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: green;
+  background: yellow;
   width: 100px;
   height: 25px;
-  font-style: bold;
-  border: 20px;
-  margin-top: 5px;
+  font: 15px bold;
 }
