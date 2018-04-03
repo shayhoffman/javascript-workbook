@@ -80,12 +80,11 @@ class App extends Component {
       winner: null
     });
   }
-//change google font later
+
   render() {
     return (
       <div className = "container">
         <div className = "menu">
-          <link href= "https://fonts.googleapis.com/css?famioly=Press+Star2P" rel = "stylesheet"/>
           <h1>Welcome to TicTacToe!</h1>
           <Announcement winner = {this.state.winner}/>
           </div>
