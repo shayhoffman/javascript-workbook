@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-
 import './App.css';
-import Announcement from './Announcement';
-import Tile from './Tile';
-import ResetButton from './ResetButton'
+
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       board: [
         ' ', ' ', ' ',
