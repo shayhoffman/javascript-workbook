@@ -1,0 +1,25 @@
+.container {
+width: 950px;
+margin: auto;
+}
+
+.menu {
+  text-align: center;
+  width: 90%;
+  border: 15px;
+}
+
+/* h1 {
+
+} */
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: green;
+  background: yellow;
+  width: 100px;
+  height: 25px;
+  font: 15px bold;
+}
